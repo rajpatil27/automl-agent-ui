@@ -47,6 +47,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        neural: {
+          blue: "hsl(var(--neural-blue))",
+          purple: "hsl(var(--neural-purple))",
+          cyan: "hsl(var(--neural-cyan))",
+          glow: "hsl(var(--electric-glow))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -80,10 +86,49 @@ export default {
             height: "0",
           },
         },
+        "neural-pulse": {
+          "0%, 100%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+          "50%": {
+            opacity: "0.7",
+            transform: "scale(1.05)",
+          },
+        },
+        "data-flow": {
+          "0%": {
+            transform: "translateX(-100%)",
+            opacity: "0",
+          },
+          "50%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translateX(100%)",
+            opacity: "0",
+          },
+        },
+        "gradient-shift": {
+          "0%, 100%": {
+            backgroundPosition: "0% 50%",
+          },
+          "50%": {
+            backgroundPosition: "100% 50%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "neural-pulse": "neural-pulse 3s ease-in-out infinite",
+        "data-flow": "data-flow 2s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 6s ease-in-out infinite",
+      },
+      backgroundImage: {
+        'gradient-neural': 'var(--gradient-neural)',
+        'gradient-glow': 'var(--gradient-glow)',
+        'gradient-card': 'var(--gradient-card)',
       },
     },
   },
